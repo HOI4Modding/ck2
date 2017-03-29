@@ -1,0 +1,288 @@
+﻿###########################
+# CK2 Mod Events
+# LOVE 
+# &
+# DEPRESSION
+###########################
+
+###########################
+# template
+###########################
+
+add_namespace = crusader_kings
+
+#template
+country_event = {
+	name = lover.0
+	title = lover.0.t
+	desc = lover.0.d
+
+	trigger = {
+
+	}
+
+	mean_time_to_happen = {
+
+	}
+
+	option = {
+		name = lover.0.a
+	}
+
+	option = {
+		name = lover.0.b
+	}
+}
+
+country_event = { #Triggered only
+	name = lover.0
+	title = lover.0.t
+	desc = lover.0.d
+	is_triggered_only = yes
+
+	option = {
+		name = lover.0.a
+	}
+
+	option = {
+		name = lover.0.b
+	}
+}
+
+###########################
+# CK2 Mod Events - Lovers <3
+###########################
+#created by Dick Bong
+
+#Found young lass (no lover)
+country_event = {
+	name = lover.1
+	title = lover.1.t
+	desc = lover.1.d
+
+	trigger = {
+		NOT = {
+			has_country_flag = has_lover
+			has_country_flag = rejected_1
+			has_country_flag = rejected_2
+			has_country_flag = rejected_3
+		}
+	}
+
+	mean_time_to_happen = {
+		days = x
+	}
+
+	option = { #Dew it
+		name = lover.1.a
+		custom_effect_tooltip = lover.1.a.tt
+		hidden_effect = {
+			random_list = { 
+				#Flirt
+				50 = { country_event = { days = 1 id = lover.2 } } 
+				#Rejected
+				50 = { 	country_event = { days = 1 id = lover.3 } }
+			}
+		}
+	}
+
+	option = {  #I'm too honorable a man for a peasant woman
+		name = lover.1.b
+	}
+}
+
+country_event = { #Rejected #This is first because there'll be chain
+	name = lover.3
+	title = lover.3.t
+	desc = lover.3.d
+	is_triggered_only = yes
+
+	option = {
+		name = lover.1.a
+		hidden_effect = {
+			add_country_flag = rejected_1
+		}
+	}
+}
+
+country_event = { #Flirt
+	name = lover.2
+	title = lover.2.t
+	desc = lover.2.d
+	is_triggered_only = yes
+
+	option = {
+		name = lover.2.a
+		hidden_effect = {
+			random_list = { 
+				#SUCCess
+				70 = { country_event = { days = 1 id = lover.5 } } 
+				#i'm alone
+				30 = { 	country_event = { days = 1 id = lover.4 } }
+			}
+		}
+	}
+	option = { #i'm the leader of [ROOT.GetLeader] dammit
+		name = lover.2.b
+		add_country_flag = rejected_1
+	}
+}
+
+country_event = { #DAMN! rejected again
+	name = lover.4
+	title = lover.4.t
+	desc = {
+		text = lover.4.d
+		trigger = { 
+			NOT = {
+				has_country_flag = rejected_letters
+			}
+		}
+	}
+	desc = {
+		text = lover.4.d
+		trigger = { 
+			AND = {
+				has_country_flag = rejected_letters
+			}
+		}
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = lover.4.a
+		hidden_effect = {
+			random_list = { 
+				#shrug it off
+				70 = {  } 
+				#get DEPRESSION
+				30 = { add_country_flag = depression }
+			}
+			add_country_flag = rejected_1
+		}
+	}
+}
+
+country_event = { #SUCCess, she tells me she'll send letters
+	name = lover.5
+	title = lover.5.t
+	desc = lover.5.d
+	is_triggered_only = yes
+
+	option = {
+		name = lover.5.a
+		hidden_effect = {
+			random_list = { 
+				#send me letters later
+				70 = { add_country_flag = love_letters } 
+				#she doesn't send letters
+				30 = { 	
+					country_event = { days = 10 id = lover.4 }
+					add_country_flag = rejected_letters 
+				}
+			}
+		}
+	}
+}
+
+country_event = { #she sent me love letters
+	name = lover.6
+	title = lover.6.t
+	desc = lover.6.d
+
+	trigger = {
+		has_country_flag = love_letters
+	}
+
+	mean_time_to_happen = {
+		days = 50
+	}
+
+	option = { #Send a love letter back
+		name = lover.6.a 
+		hidden_effect = {
+			random_list = { 
+				#love me
+				70 = { add_country_flag = lover_chain } 
+				#she loves me not
+				30 = { 	
+					country_event = { days = 10 id = lover.7 }
+					add_country_flag = stay_away_forever
+				}
+			}
+		}
+	}
+}
+
+country_event = { #stay away forever
+	name = lover.7
+	title = lover.7.t
+	desc = lover.7.d
+	is_triggered_only = yes
+
+	option = {
+		name = lover.4.d
+		hidden_effect = {
+			random_list = { 
+				#shrug it off
+				60 = {  } 
+				#get DEPRESSION
+				40 = { add_country_flag = depression }
+			}
+			add_country_flag = rejected_1
+		}
+	}
+}
+
+	option = { #Don't reply
+		name = lover.6.b
+	}
+}
+###########################
+# CK2 Mod Events - Depression
+###########################
+###########################
+# template
+###########################
+country_event = {
+	name = depression.0
+	title = depression.0.t
+	desc = depression.0.d
+
+	trigger = {
+
+	}
+
+	mean_time_to_happen = {
+
+	}
+
+	option = {
+		name = depression.0.a
+	}
+
+	option = {
+		name = depression.0.b
+	}
+}
+##########################
+country_event = { #ever since I was [blank] i have depression
+	name = depression.1
+	title = depression.1.t
+	desc = depression.1.d
+	#more desc triggers soon my boss
+
+	trigger = {
+		has_country_flag = depression
+	}
+
+	mean_time_to_happen = {
+		days = 50
+	}
+
+	option = { #gain depression trait >:(
+		name = depression.1.a
+		add_country_leader_trait = depression
+		add_country_flag = depression_trait
+	}
+}

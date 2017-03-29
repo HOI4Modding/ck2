@@ -1,0 +1,48 @@
+leader_traits = {
+	
+	##########################
+	#CK2 TRAITS              #
+	#BY DICK BONG ACE OF ACES#
+	##########################
+	
+	depression = {
+		random = no
+		political_power_factor = -0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	general = {
+		random = no
+		army_org_factor = 0.1
+		army_morale_factor = 0.1
+		experience_gain_army = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	air_ace = {
+		random = no
+		air_accidents_factor = -0.2
+		experience_gain_air = 0.2
+		production_speed_air_base_factor = -0.5
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	socialist_sympathizer = {
+		random = no
+		communism_acceptance = 10
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

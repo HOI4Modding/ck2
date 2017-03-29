@@ -1,0 +1,12 @@
+﻿l_english:
+ # x represents any number
+ #template:
+ #event.x.t:0 "Title"
+ #event.x.d:0 "Desc"
+ #event.x.a:0 "Option A"
+ #event.x.b:0 "Option B" (optional)
+ #event.x.c:0 "Option C" (optional)
+ #event.x.tt:0 "Tooltip" (optional)
+
+ #lover events –– anyone who's editing this, please put spaces inbetween events
+ 
