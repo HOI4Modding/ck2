@@ -10,3 +10,16 @@
 
  #lover events –– anyone who's editing this, please put spaces inbetween events
  
+ #templates
+ lover.0.t:0 "title"
+ lover.0.d:0 "desc"
+ lover.0.a:0 "a"
+ lover.0.b:0 "b"
+
+ lover.1.t:0 "title"
+ lover.1.d:0 "desc"
+ lover.1.a:0 "a"
+ lover.1.b:0 "b"
+ 
+
+

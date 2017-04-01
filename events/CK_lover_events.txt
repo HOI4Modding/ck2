@@ -4,55 +4,14 @@
 # &
 # DEPRESSION
 ###########################
-#dick bong ace of aces
-###########################
-# template
-###########################
 
-add_namespace = crusader_kings
+#Copyright Dick Bong, Ace of Aces 2017
 
-#template
-country_event = {
-	name = lover.0
-	title = lover.0.t
-	desc = lover.0.d
-
-	trigger = {
-
-	}
-
-	mean_time_to_happen = {
-
-	}
-
-	option = {
-		name = lover.0.a
-	}
-
-	option = {
-		name = lover.0.b
-	}
-}
-
-country_event = { #Triggered only
-	name = lover.0
-	title = lover.0.t
-	desc = lover.0.d
-	is_triggered_only = yes
-
-	option = {
-		name = lover.0.a
-	}
-
-	option = {
-		name = lover.0.b
-	}
-}
+add_namespace = ck2lover
 
 ###########################
 # CK2 Mod Events - Lovers <3
 ###########################
-#created by Dick Bong
 
 #Found young lass (no lover)
 country_event = {
@@ -310,33 +269,7 @@ country_event = { #it's official :lennyface:
 ###########################
 # CK2 Mod Events - Depression
 ###########################
-###########################
-# template
-###########################
-country_event = {
-	name = depression.0
-	title = depression.0.t
-	desc = depression.0.d
 
-	trigger = {
-
-	}
-
-	mean_time_to_happen = {
-
-	}
-
-	option = {
-		name = depression.0.a
-	}
-
-	option = {
-		name = depression.0.b
-	}
-}
-
-
-##########################
 country_event = { #ever since I was [blank] i have depression
 	name = depression.1
 	title = depression.1.t
