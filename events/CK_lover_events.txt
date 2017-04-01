@@ -7,7 +7,7 @@
 
 #Copyright Dick Bong, Ace of Aces 2017
 
-add_namespace = ck2lover
+add_namespace = lover
 
 ###########################
 # CK2 Mod Events - Lovers <3
@@ -15,7 +15,7 @@ add_namespace = ck2lover
 
 #Found young lass (no lover)
 country_event = {
-	name = lover.1
+	id = lover.1
 	title = lover.1.t
 	desc = lover.1.d
 
@@ -54,7 +54,7 @@ country_event = {
 }
 
 country_event = { #Rejected #This is first because there'll be chain
-	name = lover.3
+	id = lover.3
 	title = lover.3.t
 	desc = lover.3.d
 	is_triggered_only = yes
@@ -68,13 +68,13 @@ country_event = { #Rejected #This is first because there'll be chain
 }
 
 country_event = { #Flirt
-	name = lover.2
+	id = lover.2
 	title = lover.2.t
 	desc = lover.2.d
 	is_triggered_only = yes
 
 	option = {
-		name = lover.2.a
+		id = lover.2.a
 		hidden_effect = {
 			random_list = { 
 				#SUCCess
@@ -86,12 +86,12 @@ country_event = { #Flirt
 	}
 	option = { #i'm the leader of [ROOT.GetLeader] dammit
 		name = lover.2.b
-		add_country_flag = rejected_1
+		set_country_flag = rejected_1
 	}
 }
 
 country_event = { #DAMN! rejected again
-	name = lover.4
+	id = lover.4
 	title = lover.4.t
 	desc = {
 		text = lover.4.d
@@ -118,15 +118,15 @@ country_event = { #DAMN! rejected again
 				#shrug it off
 				70 = {  } 
 				#get DEPRESSION
-				30 = { add_country_flag = depression }
+				30 = { set_country_flag = depression }
 			}
-			add_country_flag = rejected_1
+			set_country_flag = rejected_1
 		}
 	}
 }
 
 country_event = { #SUCCess, she tells me she'll send letters
-	name = lover.5
+	id = lover.5
 	title = lover.5.t
 	desc = lover.5.d
 	is_triggered_only = yes
@@ -136,11 +136,11 @@ country_event = { #SUCCess, she tells me she'll send letters
 		hidden_effect = {
 			random_list = { 
 				#send me letters later
-				70 = { add_country_flag = love_letters } 
+				70 = { set_country_flag = love_letters } 
 				#she doesn't send letters
 				30 = { 	
 					country_event = { days = 10 id = lover.4 }
-					add_country_flag = rejected_letters 
+					set_country_flag = rejected_letters 
 				}
 			}
 		}
@@ -148,7 +148,7 @@ country_event = { #SUCCess, she tells me she'll send letters
 }
 
 country_event = { #she sent me love letters
-	name = lover.6
+	id = lover.6
 	title = lover.6.t
 	desc = lover.6.d
 
@@ -165,11 +165,11 @@ country_event = { #she sent me love letters
 		hidden_effect = {
 			random_list = { 
 				#love me
-				70 = { add_country_flag = lover_chain } 
+				70 = { set_country_flag = lover_chain } 
 				#she loves me not
 				30 = { 	
 					country_event = { days = 10 id = lover.7 }
-					add_country_flag = stay_away_forever
+					set_country_flag = stay_away_forever
 				}
 			}
 		}
@@ -180,7 +180,7 @@ country_event = { #she sent me love letters
 }
 
 country_event = { #stay away forever
-	name = lover.7
+	id = lover.7
 	title = lover.7.t
 	desc = lover.7.d
 	is_triggered_only = yes
@@ -192,15 +192,15 @@ country_event = { #stay away forever
 				#shrug it off
 				60 = {  } 
 				#get DEPRESSION
-				40 = { add_country_flag = depression }
+				40 = { set_country_flag = depression }
 			}
-			add_country_flag = rejected_1
+			set_country_flag = rejected_1
 		}
 	}	
 }
 
 country_event = { #i'm in love <3
-	name = lover.8
+	id = lover.8
 	title = lover.8.t
 	desc = lover.8.d
 
@@ -231,7 +231,7 @@ country_event = { #i'm in love <3
 }
 
 country_event = { #oh gawd she was a communist spy
-	name = lover.9
+	id = lover.9
 	title = lover.9.t
 	desc = lover.9.d
 	is_triggered_only = yes
@@ -258,176 +258,13 @@ country_event = { #oh gawd she was a communist spy
 }
 
 country_event = { #it's official :lennyface:
-	name = lover.10
+	id = lover.10
 	title = lover.10.t
 	desc = lover.10.d
 	is_triggered_only = yes
 
 	option = {
 		name = lover.10.a 
-		add_country_flag = has_lover
-	}
-}
-
-###########################
-# CK2 Mod Events - Depression
-###########################
-
-country_event = { #ever since I was [blank] i have depression
-	name = depression.1
-	title = depression.1.t
-	desc = {
-		text = depression.1.d.lover
-		trigger = { 
-			has_country_flag = rejected_1
-		}
-	}
-	#more desc triggers soon my boss
-
-	trigger = {
-		OR = {
-			has_country_flag = depression
-			has_country_flag = losing_depression
-		}
-	}
-
-	mean_time_to_happen = {
-		days = 50
-	}
-
-	option = { #gain depression trait >:(
-		name = depression.1.a
-		add_country_leader_trait = depression
-		add_country_flag = depression_trait
-	}
-}
-
-country_event = { #Depression cured!
-	name = depression.2
-	title = depression.2.t
-	desc = {
-		text = depression.2.d
-		trigger = { 
-			has_war = yes
-		}
-	}
-	desc = {
-		text = depression.2.d
-		trigger = { 
-			has_country_flag = has_lover
-		}
-	}
-
-	trigger = {
-		has_country_flag = depression
-		OR = {
-			has_war = yes
-			has_country_flag = has_lover
-		}
-	}
-
-	mean_time_to_happen = {
-		days = 700
-	}
-
-	option = { #life is worth living
-		name = depression.1.a
-		remove_country_leader_trait = depression
-		clr_country_flag = depression
-	}
-}
-
-country_event = { #suicide is the only option
-	name = depression.3
-	title = depression.3.t
-	desc = depression.3.d
-
-	trigger = {
-		has_country_flag = depression
-	}
-
-	mean_time_to_happen = {
-		days = 1200
-	}
-
-	option = { #gain depression trait >:(
-		name = depression.3.a
-		hidden_effect = {
-			random_list = { 
-				#commit suicide hanging
-				10 = { 
-					country_event = { days = 1 id = depression.5 } 
-					add_country_flag = suicide_hanging
-				}
-				#commit suicide gun
-				20 = { 
-					country_event = { days = 1 id = depression.5 } 
-					add_country_flag = suicide_gun
-				}
-				#commit suicide bridge
-				20 = { 
-					country_event = { days = 1 id = depression.5 } 
-					add_country_flag = suicide_bridge
-				}
-				#don't
-				50 = { country_event = { days = 1 id = depression.4 } }
-			}
-		}
-	}
-}
-country_event = { #thank god I didn't
-	name = depression.4
-	title = depression.4.t
-	desc = depression.4.d
-	is_triggered_only = yes
-
-	option = {
-		name = depression.4.a
-		clr_country_flag = depression
-		remove_country_leader_trait = depression
-	}
-}
-
-country_event = { #Oh god, i did it!
-	name = depression.5
-	title = depression.5.t
-	desc = {
-		text = depression.5.d.1
-		trigger = { 
-			has_country_flag = suicide_hanging
-		}
-	}
-	desc = {
-		text = depression.5.d.2
-		trigger = { 
-			has_country_flag = suicide_gun
-		}
-	}
-	desc = {
-		text = depression.5.d.3
-		trigger = { 
-			has_country_flag = suicide_bridge
-		}
-	}
-	is_triggered_only = yes
-
-	option = {
-		name = depression.5.a
-		hidden_effects = {
-			news_event = leader_suicide
-		}
-		kill_country_leader = yes
-		#failed suicide events happening soon
-	}
-}
-
-news_event = { #leader suicide
-	name = leader_suicide
-	title = leader_suicide.t
-	desc = leader_suicide.d
-	is_triggered_only = yes
-
-	option = {
-		name = leader_suicide.a
+		set_country_flag = has_lover
 	}
 }

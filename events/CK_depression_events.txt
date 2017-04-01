@@ -1,0 +1,164 @@
+﻿###########################
+# CK2 Mod Events - Depression
+###########################
+
+add_namespace = depression
+
+country_event = { #ever since I was [blank] i have depression
+	id = depression.1
+	title = depression.1.t
+	desc = {
+		text = depression.1.d.lover
+		trigger = { 
+			has_country_flag = rejected_1
+		}
+	}
+	#more desc triggers soon my boss
+
+	trigger = {
+		OR = {
+			has_country_flag = depression
+			has_country_flag = losing_depression
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 50
+	}
+
+	option = { #gain depression trait >:(
+		name = depression.1.a
+		add_country_leader_trait = depression
+		set_country_flag = depression_trait
+	}
+}
+
+country_event = { #Depression cured!
+	id = depression.2
+	title = depression.2.t
+	desc = {
+		text = depression.2.d
+		trigger = { 
+			has_war = yes
+		}
+	}
+	desc = {
+		text = depression.2.d
+		trigger = { 
+			has_country_flag = has_lover
+		}
+	}
+
+	trigger = {
+		has_country_flag = depression
+		OR = {
+			has_war = yes
+			has_country_flag = has_lover
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 700
+	}
+
+	option = { #life is worth living
+		name = depression.1.a
+		remove_country_leader_trait = depression
+		clr_country_flag = depression
+	}
+}
+
+country_event = { #suicide is the only option
+	id = depression.3
+	title = depression.3.t
+	desc = depression.3.d
+
+	trigger = {
+		has_country_flag = depression
+	}
+
+	mean_time_to_happen = {
+		days = 1200
+	}
+
+	option = { #gain depression trait >:(
+		name = depression.3.a
+		hidden_effect = {
+			random_list = { 
+				#commit suicide hanging
+				10 = { 
+					country_event = { days = 1 id = depression.5 } 
+					set_country_flag = suicide_hanging
+				}
+				#commit suicide gun
+				20 = { 
+					country_event = { days = 1 id = depression.5 } 
+					set_country_flag = suicide_gun
+				}
+				#commit suicide bridge
+				20 = { 
+					country_event = { days = 1 id = depression.5 } 
+					set_country_flag = suicide_bridge
+				}
+				#don't
+				50 = { country_event = { days = 1 id = depression.4 } }
+			}
+		}
+	}
+}
+country_event = { #thank god I didn't
+	id = depression.4
+	title = depression.4.t
+	desc = depression.4.d
+	is_triggered_only = yes
+
+	option = {
+		name = depression.4.a
+		clr_country_flag = depression
+		remove_country_leader_trait = depression
+	}
+}
+
+country_event = { #Oh god, i did it!
+	id = depression.5
+	title = depression.5.t
+	desc = {
+		text = depression.5.d.1
+		trigger = { 
+			has_country_flag = suicide_hanging
+		}
+	}
+	desc = {
+		text = depression.5.d.2
+		trigger = { 
+			has_country_flag = suicide_gun
+		}
+	}
+	desc = {
+		text = depression.5.d.3
+		trigger = { 
+			has_country_flag = suicide_bridge
+		}
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = depression.5.a
+		hidden_effects = {
+			news_event = leader_suicide
+		}
+		kill_country_leader = yes
+		#failed suicide events happening soon
+	}
+}
+
+news_event = { #leader suicide
+	id = leader_suicide
+	title = leader_suicide.t
+	desc = leader_suicide.d
+	is_triggered_only = yes
+
+	option = {
+		name = leader_suicide.a
+	}
+}

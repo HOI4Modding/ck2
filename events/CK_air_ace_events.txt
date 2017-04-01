@@ -1,0 +1,212 @@
+﻿###########################
+# CK2 Mod Events
+# SPECIALIZED 
+# & MISC
+###########################
+
+#Copyright Dick Bong, Ace of Aces 2017
+
+###########################
+# CK2 Mod Events - Air Ace 
+###########################
+
+add_namespace = airace
+
+#become pilot
+country_event = {
+	id = airace.1
+	title = airrace.1.t
+	desc = airrace.1.d
+
+	trigger = {
+		NOT = {
+			has_country_flag = not_air_ace
+			has_country_flag = air_ace_trait
+			has_country_flag = air_ace_trait_chain
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1000
+	}
+
+	option = { #Become a Pilot!
+		ai_chance = { factor = 10 }
+		name = airrace.1.a
+		custom_effect_tooltip = airrace.1.a.tt
+		hidden_effect = {
+			country_event = { days = 10 id = airrace.2 }
+			has_country_flag = air_ace_trait_chain
+		}
+	}
+
+	option = {  #Too Dangerous!
+		ai_chance = { factor = 90 }
+		name = airrace.1.b
+		set_country_flag = not_air_ace
+	}
+}
+
+#Training Session (Skydiving)
+country_event = {
+	id = airace.2
+	title = airrace.2.t
+	desc = airrace.2.d
+	is_triggered_only = yes
+
+	option = {
+		name = airace.2.a
+		hidden_effect = {
+			random_list = {
+				90 = { 
+					country_event = { days = 10 id = airrace.4 }
+				} 
+				10 = { 
+					country_event = { days = 1 id = airrace.3 } 
+				}
+			}
+		}
+	}
+}
+
+#Air Accident!
+country_event = {
+	id = airace.3
+	title = airrace.3.t
+	desc = airrace.3.d
+	is_triggered_only = yes
+
+	option = { #Oh shit!
+		name = airace.3.a
+		kill_country_leader = yes
+	}
+}
+
+#Training Session (Formation Flying)
+country_event = {
+	id = airace.4
+	title = airrace.4.t
+	desc = airrace.4.d
+	is_triggered_only = yes
+
+	option = {
+		name = airace.4.a
+		hidden_effect = {
+			random_list = {
+				85 = { 
+					country_event = { days = 10 id = airrace.5 }
+				} 
+				15 = { 
+					country_event = { days = 1 id = airrace.3 } 
+				}
+			}
+		}
+	}
+}
+
+#Training Session (Simulated Dogfight)
+country_event = {
+	id = airace.5
+	title = airrace.5.t
+	desc = airrace.5.d
+	is_triggered_only = yes
+
+	option = {
+		name = airace.5.a
+		hidden_effect = {
+			random_list = {
+				80 = { 
+					country_event = { days = 10 id = airrace.6 }
+				} 
+				20 = { 
+					country_event = { days = 1 id = airrace.6 } 
+				}
+			}
+		}
+	}
+}
+
+#Graduated Air School
+country_event = {
+	id = airace.6
+	title = airrace.6.t
+	desc = airrace.6.d
+	is_triggered_only = yes
+
+	option = {
+		name = airace.6.a
+		add_country_leader_trait = air_ace
+		set_country_flag = air_ace_trait
+	}
+}
+
+###########################
+# CK2 Mod Events - Carousing! 
+###########################
+
+add_namespace = carousing
+
+#Sudden urge to get turnt
+country_event = {
+	id = carousing.1
+	title = carousing.1.t
+	desc = carousing.1.d
+
+	trigger = {
+		NOT = {
+			has_country_flag = not_carousing
+			has_country_flag = carouser_trait
+			has_war = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1000
+	}
+
+	option = { #Let's party!
+		ai_chance = { factor = 35 }
+		name = carousing.1.a
+		custom_effect_tooltip = carousing.1.a.tt
+		hidden_effect = {
+			country_event = { days = 10 id = carousing.2 }
+		}
+	}
+
+	option = {  #A Ruler Musn't Party!
+		ai_chance = { factor = 65 }
+		name = carousing.1.b
+		set_country_flag = not_carousing
+	}
+}
+
+#Sudden urge to get turnt
+country_event = {
+	id = carousing.2
+	title = carousing.2.t
+	desc = carousing.2.d
+	is_triggered_only = yes
+
+	option = { #Let's party!
+		name = carousing.1.a
+		custom_effect_tooltip = carousing.1.a.tt
+		random_country = {
+			limit = {
+				has_war = no
+			}
+			hidden_effect = {
+				country_event = { days = 5 id = carousing.3 }
+			}
+		}
+	}
+}
+
+###########################
+# CK2 Mod Events - Sayyid
+###########################
+###########################
+# CK2 Mod Events - Satan
+###########################
+###########################
+# CK2 Mod Events - Crusader
+###########################
