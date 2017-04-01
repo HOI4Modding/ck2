@@ -61,3 +61,26 @@
  lover.10.d:0 "I met with her and all is fine, she is considered my lover.."
  lover.10.a:0 "Amazing."
 
+ #depression
+
+ #template
+ depression.1.t:0 "I Am Depressed."
+ depression.1.d:0 "Ever since my lover left me I have been in depression, all I can think about is her."
+ depression.1.a:0 "Why!"
+
+ depression.2.t:0 "My Depression is Cured!"
+ depression.2.d:0 "After a while I have gotten over the whole thing, after all I have a country to rule."
+ depression.2.a:0 "Great!"
+
+ depression.3.t:0 "Suicide is the Only Option"
+ depression.3.d:0 "I have been having suicdial thoughts, maybe life isn't worth living."
+ depression.3.a:0 "Goodbye cruel world."
+
+ depression.4.t:0 "Thank God I Didn't"
+ depression.4.d:0 "As I loaded up the gun I had some second thoughts, who needs her, I have my country! "
+ depression.4.a:0 "Let's get back to work."
+
+ depression.5.t:0 "Oh God, I Did it."
+ depression.5.d:0 "I loaded up my gun, slowly I pressed the barrel to my head, I pulled the trigger."
+ depression.5.a:0 "It was never worth it."
+ 
