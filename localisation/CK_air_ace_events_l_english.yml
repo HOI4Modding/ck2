@@ -16,7 +16,20 @@
  airace.0.a:0 "a"
  airace.0.b:0 "b"
 
- airace.1.t:0 ""
- airace.1.d:0 "desc"
- airace.1.a:0 "a"
- airace.1.b:0 "b"
+ airace.1.t:0 "Become Pilot?"
+ airace.1.d:0 "Ever since I was a boy I have always had a knack for flying. Maybe I should consider becomin a pilot."
+ airace.1.a:0 "I'll give it a try."
+ airace.1.b:0 "Its too dangerous!"
+
+ airace.2.t:0 "Flight School Training Session, Skydiving"
+ airace.2.d:0 "I have decided to become a pilot, I will start by going to flight school. My first training session is skydiving."
+ airace.2.a:0 "Great!"
+
+ airace.3.t:0 "Air Accident"
+ airace.3.d:0 "Sadly, our faithful leader has died in a horrible flight accident during his training."
+ airace.3.a:0 "May god rest his soul"
+
+ 
+
+
+
