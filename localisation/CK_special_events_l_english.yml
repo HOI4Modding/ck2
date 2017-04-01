@@ -1,0 +1,22 @@
+﻿l_english:
+ # x represents any number
+ #template:
+ #event.x.t:0 "Title"
+ #event.x.d:0 "Desc"
+ #event.x.a:0 "Option A"
+ #event.x.b:0 "Option B" (optional)
+ #event.x.c:0 "Option C" (optional)
+ #event.x.tt:0 "Tooltip" (optional)
+
+ #air race –– anyone who's editing this, please put spaces inbetween events
+ 
+ #templates
+ airace.0.t:0 "title"
+ airace.0.d:0 "desc"
+ airace.0.a:0 "a"
+ airace.0.b:0 "b"
+
+ airace.1.t:0 ""
+ airace.1.d:0 "desc"
+ airace.1.a:0 "a"
+ airace.1.b:0 "b"
