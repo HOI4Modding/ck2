@@ -25,11 +25,12 @@ country_event = {
 			has_country_flag = rejected_1
 			has_country_flag = rejected_2
 			has_country_flag = rejected_3
+			has_country_flag = lover_event_1
 		}
 	}
 
 	mean_time_to_happen = {
-		days = x
+		days = 1000
 	}
 
 	option = { #Dew it
@@ -42,11 +43,13 @@ country_event = {
 				#Rejected
 				50 = { 	country_event = { days = 1 id = lover.3 } }
 			}
+			add_country_flag = lover_event_1
 		}
 	}
 
 	option = {  #I'm too honorable a man for a peasant woman
 		name = lover.1.b
+		add_country_flag = lover_event_1
 	}
 }
 
