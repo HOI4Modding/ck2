@@ -17,7 +17,7 @@
  airace.0.b:0 "b"
 
  airace.1.t:0 "Become Pilot?"
- airace.1.d:0 "Ever since I was a boy I have always had a knack for flying. Maybe I should consider becomin a pilot."
+ airace.1.d:0 "Ever since I was a boy I have always had a knack for flying. Maybe I should consider becoming a pilot."
  airace.1.a:0 "I'll give it a try."
  airace.1.b:0 "Its too dangerous!"
 
@@ -27,7 +27,21 @@
 
  airace.3.t:0 "Air Accident"
  airace.3.d:0 "Sadly, our faithful leader has died in a horrible flight accident during his training."
- airace.3.a:0 "May god rest his soul"
+ airace.3.a:0 "May god rest his soul."
+
+ airace.4.t:0 "Flight School Training Session, Formation Flying"
+ airace.4.d:0 "After I passed my skydiving test I have moved on to formation flying."
+ airace.4.a:0 "Good."
+
+ airace.5.t:0 "Flight School Training Session Simulated Dogfight"
+ airace.5.d:0 "Turns out I am an outstanding pilot! Now to move onto simulated dogfights."
+ airace.5.a:0 Amazing!
+
+ airace.6.t:0 "Graduated Flight School"
+ airace.6.d:0 "I have graduated flight school in no time, I am ready to become a pilot."
+ airace.6.a:0 "Great!"
+
+
 
  
 
