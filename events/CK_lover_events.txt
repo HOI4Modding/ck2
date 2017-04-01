@@ -26,6 +26,7 @@ country_event = {
 			has_country_flag = rejected_2
 			has_country_flag = rejected_3
 			has_country_flag = lover_event_1
+			set_country_flag = lover_turned_down_1
 		}
 	}
 
@@ -43,13 +44,14 @@ country_event = {
 				#Rejected
 				50 = { 	country_event = { days = 1 id = lover.3 } }
 			}
-			add_country_flag = lover_event_1
+			set_country_flag = lover_event_1
 		}
 	}
 
 	option = {  #I'm too honorable a man for a peasant woman
 		name = lover.1.b
-		add_country_flag = lover_event_1
+		set_country_flag = lover_event_1
+		set_country_flag = lover_turned_down_1
 	}
 }
 
@@ -62,7 +64,7 @@ country_event = { #Rejected #This is first because there'll be chain
 	option = {
 		name = lover.1.a
 		hidden_effect = {
-			add_country_flag = rejected_1
+			set_country_flag = rejected_1
 		}
 	}
 }
@@ -74,7 +76,7 @@ country_event = { #Flirt
 	is_triggered_only = yes
 
 	option = {
-		id = lover.2.a
+		name = lover.2.a
 		hidden_effect = {
 			random_list = { 
 				#SUCCess
@@ -86,7 +88,7 @@ country_event = { #Flirt
 	}
 	option = { #i'm the leader of [ROOT.GetLeader] dammit
 		name = lover.2.b
-		set_country_flag = rejected_1
+		set_country_flag = lover_turned_down_1
 	}
 }
 
@@ -154,6 +156,12 @@ country_event = { #she sent me love letters
 
 	trigger = {
 		has_country_flag = love_letters
+		NOT = {
+			has_country_flag = rejected_1
+			has_country_flag = lover_turned_down_1
+			has_country_flag = lover_chain
+			has_country_flag = stay_away_forever
+		}
 	}
 
 	mean_time_to_happen = {
@@ -176,6 +184,7 @@ country_event = { #she sent me love letters
 	}
 	option = { #Don't reply
 		name = lover.6.b
+		set_country_flag = lover_turned_down_1
 	}
 }
 
@@ -206,6 +215,13 @@ country_event = { #i'm in love <3
 
 	trigger = {
 		has_country_flag = lover_chain
+		NOT = {
+			has_country_flag = lover_turned_down_1
+			has_country_flag = rejected_1
+			has_country_flag = has_lover
+			has_country_flag = lover_was_spy_1
+			has_country_falg = lover_spy_boost
+		}
 	}
 
 	mean_time_to_happen = {
@@ -217,16 +233,16 @@ country_event = { #i'm in love <3
 		hidden_effect = {
 			random_list = { 
 				#love me
-				70 = country_event = { days = 10 id = lover.10 }
+				70 = { country_event = { days = 10 id = lover.10 } }
 				#she's a spy!
-				20 = { 	
-					country_event = { days = 10 id = lover.9 }
-				}
+				20 = { country_event = { days = 10 id = lover.9 } }
 			}
 		}
 	}
+	
 	option = { #Don't reply––she may be a spy!
-		name = lover.6.b
+		name = lover.8.b
+		set_country_flag = lover_turned_down_1
 	}
 }
 
@@ -244,6 +260,7 @@ country_event = { #oh gawd she was a communist spy
 			}
 		}
 		add_popularity = { ideology = communism popularity = 0.1 }
+		set_country_flag = lover_was_spy_1
 	}
 	option = { #wait I'm a communist! Hell yeah
 		name = lover.6.b
@@ -254,6 +271,7 @@ country_event = { #oh gawd she was a communist spy
 		}
 		add_popularity = { ideology = communism popularity = 0.1 }
 		country_event = { days = 10 id = lover.10 }
+		add_country_flag = lover_spy_boost
 	}
 }
 

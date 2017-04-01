@@ -144,8 +144,8 @@ country_event = { #Oh god, i did it!
 
 	option = {
 		name = depression.5.a
-		hidden_effects = {
-			news_event = leader_suicide
+		hidden_effect = {
+			news_event = depression.6
 		}
 		kill_country_leader = yes
 		#failed suicide events happening soon
@@ -153,12 +153,12 @@ country_event = { #Oh god, i did it!
 }
 
 news_event = { #leader suicide
-	id = leader_suicide
-	title = leader_suicide.t
-	desc = leader_suicide.d
+	id = depression.6
+	title = depression.6.t
+	desc = depression.6.d
 	is_triggered_only = yes
 
 	option = {
-		name = leader_suicide.a
+		name = depression.6.a
 	}
 }

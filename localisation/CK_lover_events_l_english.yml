@@ -16,17 +16,17 @@
  lover.0.a:0 "a"
  lover.0.b:0 "b"
 
- lover.1.t:0 "Found Young Lass."
- lover.1.d:0 "This morning I ran into a beautiful young lass, I see no ring on her finger. Maybe now it is time to strike."
+ lover.1.t:0 "Approached Young Lass"
+ lover.1.d:0 "This morning I ran into a beautiful young lass, and as I was walking by, I saw no ring on her finger. Perhaps I should make a move? The office gets so lonely sometimes."
  lover.1.a:0 "Approach her."
  lover.1.b:0 "I am too honorable of a man for a peasent woman."
  
  lover.3.t:0 "I was Rejected!"
- lover.3.d:0 "When I approached her she was apparently uncomfortable, sadly she is uninterested."
+ lover.3.d:0 "When I approached her she was apparently uncomfortable. It's a darn shame nobody wants a true leader anymore."
  lover.3.a:0 "Damn."
 
- lover.2.t:0 "She Is Interested."
- lover.2.d:0 "When I walked up to her we satarted a conversation, she laughed, I laughed, she seems like a nice person."
+ lover.2.t:0 "She Is Interested"
+ lover.2.d:0 "When I walked up to her we starred a conversation. She laughed, I laughed, she seems like a nice person."
  lover.2.a:0 "Flirt with her."
  lover.2.b:0 "I am the leader of [ROOT.GetLeader] dammit, I have no need for peasant filth."
 
@@ -34,8 +34,8 @@
  lover.4.d:0 "When I started to flirt with her she was uninterested and uncomfortable."
  lover.4.a:0 "Dammit!"
 
- lover.5.t:0 "Success! She will send me letters."
- lover.5.d:0 "When I started to flirt with her she flirted back, she is obviously interested. I will be getting letters from her."
+ lover.5.t:0 "Success!"
+ lover.5.d:0 "When I started to flirt with her, she flirted back, she is obviously interested. I will be getting letters from her."
  lover.5.a:0 "Great!"
 
  lover.6.t:0 "She Sent Me Love Letters."
@@ -65,22 +65,22 @@
 
  #template
  depression.1.t:0 "I Am Depressed."
- depression.1.d:0 "Ever since 'it' happened I have been in depression."
- depression.1.a:0 "Why!"
+ depression.1.d:0 "Over the past couple weeks, my life has tumbled into a perpetual sadness. I can muster no purpose to carry out my day to day activities."
+ depression.1.a:0 "Why!?"
 
  depression.2.t:0 "My Depression is Cured!"
  depression.2.d:0 "After a while I have gotten over the whole thing, after all I have a country to rule."
  depression.2.a:0 "Great!"
 
  depression.3.t:0 "Suicide is the Only Option"
- depression.3.d:0 "I have been having suicdial thoughts, maybe life isn't worth living."
+ depression.3.d:0 "I have been having suicidal thoughts, maybe life isn't worth living."
  depression.3.a:0 "Goodbye cruel world."
 
  depression.4.t:0 "Thank God I Didn't"
- depression.4.d:0 "As I loaded up the gun I had some second thoughts, I have my country! "
+ depression.4.d:0 "As I loaded up the gun I had some second thoughts, I have my country!"
  depression.4.a:0 "Let's get back to work."
 
  depression.5.t:0 "Oh God, I Did it."
- depression.5.d:0 "I loaded up my gun, slowly I pressed the barrel to my head, I pulled the trigger."
+ depression.5.d:0 "I loaded up my gun, slowly I pressed the barrel to my head, and pulled the trigger."
  depression.5.a:0 "It was never worth it."
  
