@@ -22,12 +22,17 @@ country_event = {
 		days = 1000
 	}
 
-	option = { #Let's party!
+	option = { #Who shall we invite?
 		ai_chance = { factor = 35 }
 		name = carousing.1.a
 		custom_effect_tooltip = carousing.1.a.tt
-		hidden_effect = {
-			country_event = { days = 10 id = carousing.2 }
+		random_country = {
+			limit = {
+				has_war = no
+			}
+			hidden_effect = {
+				country_event = { days = 5 id = carousing.2 }
+			}
 		}
 	}
 
@@ -38,7 +43,7 @@ country_event = {
 	}
 }
 
-#Sudden urge to get turnt
+#FROM has asked us to get turnt. Shall we get turnt?
 country_event = {
 	id = carousing.2
 	title = carousing.2.t
@@ -46,16 +51,37 @@ country_event = {
 	is_triggered_only = yes
 
 	option = { #Let's party!
-		name = carousing.1.a
+		name = carousing.2.a
 		custom_effect_tooltip = carousing.1.a.tt
-		random_country = {
-			limit = {
-				has_war = no
-			}
-			hidden_effect = {
-				country_event = { days = 5 id = carousing.3 }
-			}
+		add_opinion_modifier = { target = FROM modifier = carousing }
+		FROM = {
+			reverse_add_opinion_modifier = { target = ROOT modifier = carousing }
 		}
+	}
+
+	option = { #Nope, not for me.
+		name = carousing.2.b
+		FROM = {
+			reverse_add_opinion_modifier = { target = ROOT modifier = refused_carousing }
+			country_event = { days = 5 id = carousing.3 }
+		}
+	}
+}
+
+#They refused my party invite :(
+country_event = {
+	id = carousing.2
+	title = carousing.2.t
+	desc = carousing.2.d
+	is_triggered_only = yes
+
+	option = { #Maybe I'm not cut out for the partying lifestyle
+		name = carousing.2.a
+		custom_effect_tooltip = carousing.1.a.tt
+	}
+
+	option = { #I'll hold my own party!
+		name = carousing.2.a
 	}
 }
 
