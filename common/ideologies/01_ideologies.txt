@@ -1,0 +1,103 @@
+ideologies = {
+	
+	empire = {
+	
+		types = {
+			
+			empire = {
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_COMMUNIST_1"
+			"FACTION_NAME_COMMUNIST_2"
+			"FACTION_NAME_COMMUNIST_3"
+			"FACTION_NAME_COMMUNIST_4"
+			"FACTION_NAME_COMMUNIST_5"
+		}
+		
+		color = { 58 59 171 }
+		
+		rules = {
+			can_declare_war_on_same_ideology = yes
+			can_force_government = no
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_lower_tension = yes
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = yes
+			can_force_government = no
+		}
+		
+		war_impact_on_world_tension = 0.0
+		faction_impact_on_world_tension = 0.0
+		
+		modifiers = {
+			generate_wargoal_tension = 0
+			join_faction_tension = 0.0
+			lend_lease_tension = 0.0
+			send_volunteers_tension = 0.0
+			guarantee_tension = 0.0
+			take_states_cost_factor = 0.0
+			annex_cost_factor = 0.0
+		}
+		
+		can_be_boosted = no
+		
+		faction_modifiers = {
+			
+		}
+		ai_democratic = yes # uses the democratic AI behaviour
+	}
+
+
+	count = {
+	
+		types = {
+			
+			count = {
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_COMMUNIST_1"
+			"FACTION_NAME_COMMUNIST_2"
+			"FACTION_NAME_COMMUNIST_3"
+			"FACTION_NAME_COMMUNIST_4"
+			"FACTION_NAME_COMMUNIST_5"
+		}
+		
+		color = { 255 215 0 }
+		
+		rules = {
+			can_declare_war_on_same_ideology = yes
+			can_force_government = no
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_lower_tension = yes
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = yes
+			can_force_government = no
+		}
+		
+		war_impact_on_world_tension = 0.0
+		faction_impact_on_world_tension = 0.0
+		
+		modifiers = {
+			generate_wargoal_tension = 0
+			join_faction_tension = 0.0
+			lend_lease_tension = 0.0
+			send_volunteers_tension = 0.0
+			guarantee_tension = 0.0
+			take_states_cost_factor = 0.0
+			annex_cost_factor = 0.0
+		}
+		
+		can_be_boosted = no
+		
+		faction_modifiers = {
+			
+		}
+		ai_democratic = yes # uses the democratic AI behaviour
+	}
+}

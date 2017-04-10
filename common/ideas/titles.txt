@@ -1,0 +1,33 @@
+ideas = {
+	titles = {
+		law = yes
+		duchy_of_chile = {
+			default = no
+			cost = 300
+			removal_cost = -1
+			available = {
+				has_war = no
+				AND = {
+					506 = { is_owned_by = FROM }
+					507 = { is_owned_by = FROM }
+					279 = { is_owned_by = FROM }
+				}
+				has_country_flag = duchy_of_chile
+			}
+			picture = duchy_of_chile
+			on_add = {
+				set_cosmetic_tag = CHL
+				set_country_flag = duchy_of_chile
+				hidden_effect = {
+					506 = { add_core_of = FROM }
+					507 = { add_core_of = FROM }
+					279 = { add_core_of = FROM }
+					}
+
+				ai_will_do = {
+					factor = 1
+				}
+			}
+		}
+	}
+}
