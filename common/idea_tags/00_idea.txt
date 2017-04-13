@@ -18,21 +18,21 @@ idea_categories = {
 		slot = levies
 		slot = trade_laws
 		slot = economy
-		slot = political_advisor
-		slot = political_advisor
+		slot = something
+		slot = stability
 		slot = titles
 		
 		cost = 150
 		removal_cost = 0
 	}
 	
-	research_production = {
-		slot = tank_manufacturer
-		slot = naval_manufacturer
-		slot = aircraft_manufacturer
-		slot = materiel_manufacturer
-		slot = industrial_concern
-		slot = theorist
+	council = {
+		slot = political_advisor
+		slot = chancellor
+		slot = marshall
+		slot = steward
+		slot = spymaster
+		slot = council_chaplain
 
 		cost = 150
 		removal_cost = 0

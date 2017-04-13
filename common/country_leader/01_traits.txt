@@ -35,14 +35,4 @@ leader_traits = {
 			factor = 1
 		}
 	}
-
-	socialist_sympathizer = {
-		random = no
-		communism_acceptance = 10
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 }

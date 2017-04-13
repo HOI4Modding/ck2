@@ -1,0 +1,504 @@
+ideas = {
+	chancellor = {
+		law = yes
+		chancellor = {
+			allowed = {
+				NOT = {
+					has_country_flag = has_chancellor
+				}
+			}
+			available = {
+				
+			}
+	
+			on_add = {
+				country_event = { days = 1 id = court.2 }
+			}
+	
+			do_effect = {
+				NOT = {
+					
+				}
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	marshall = {
+		law = yes
+		marshall = {
+			allowed = {
+				NOT = {
+					has_country_flag = has_marshall
+				}
+			}
+			available = {
+				
+			}
+	
+			on_add = {
+				country_event = { days = 1 id = court.2 }
+			}
+	
+			do_effect = {
+				NOT = {
+					
+				}
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	#randomised ideas
+	country = {
+		#Chancellor
+		chancellor_5 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				autonomy_gain = 0.25
+				subjects_autonomy_gain = -0.25
+				opinion_gain_monthly_factor = 0.25
+			}
+		}
+		chancellor_4 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				autonomy_gain = 0.20
+				subjects_autonomy_gain = -0.20
+				opinion_gain_monthly_factor = 0.20
+			}
+		}
+		chancellor_3 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				autonomy_gain = 0.15
+				subjects_autonomy_gain = -0.15
+				opinion_gain_monthly_factor = 0.15
+			}
+		}
+		chancellor_2 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				autonomy_gain = 0.1
+				subjects_autonomy_gain = -0.1
+				opinion_gain_monthly_factor = 0.1
+			}
+		}
+		chancellor_1 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				autonomy_gain = 0.05
+				subjects_autonomy_gain = -0.05
+				opinion_gain_monthly_factor = 0.05
+			}
+		}
+		#Marshall
+		marshall_5 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				justify_war_goal_time = -0.25
+				conscription = 0.025
+				training_time_factor = -0.25
+			}
+		}
+		marshall_4 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				justify_war_goal_time = -0.20
+				conscription = 0.020
+				training_time_factor = -0.2
+			}
+		}
+		marshall_3 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				justify_war_goal_time = -0.15
+				conscription = 0.015
+				training_time_factor = -0.15
+			}
+		}
+		marshall_2 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				justify_war_goal_time = -0.10
+				conscription = 0.010
+				training_time_factor = -0.10
+			}
+		}
+		marshall_1 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				justify_war_goal_time = -0.05
+				conscription = 0.005
+				training_time_factor = -0.05
+			}
+		}
+		#
+		steward_5 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.25
+				industry_repair_factor = 0.25
+				consumer_goods_factor = -0.025
+			}
+		}
+		steward_4 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.20
+				industry_repair_factor = 0.20
+				consumer_goods_factor = -0.020
+			}
+		}
+		steward_3 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				industry_repair_factor = 0.15
+				consumer_goods_factor = -0.015
+			}
+		}
+		steward_2 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				industry_repair_factor = 0.10
+				consumer_goods_factor = -0.010
+			}
+		}
+		steward_1 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				industry_repair_factor = 0.05
+				consumer_goods_factor = -0.005
+			}
+		}
+		#spymaster
+		spymaster_5 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.30
+				political_power_factor = 0.30
+				research_time_factor = -0.125
+			}
+		}
+		spymaster_4 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.25
+				political_power_factor = 0.25		
+				research_time_factor = -0.1
+			}
+		}
+		spymaster_3 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.20
+				political_power_factor = 0.20
+				research_time_factor = -0.075
+			}
+		}
+		spymaster_2 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.150
+				political_power_factor = 0.150		
+				research_time_factor = -0.05
+			}
+		}
+		spymaster_1 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.1
+				political_power_factor = 0.1				
+				research_time_factor = -0.025
+			}
+		}
+		#court chaplain
+		court_chaplain_5 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				unity_factor = 0.25
+			}
+		}
+		court_chaplain_5 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				unity_factor = 0.20
+			}
+		}
+		court_chaplain_5 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				unity_factor = 0.15
+			}
+		}
+		court_chaplain_5 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				unity_factor = 0.1
+			}
+		}
+		court_chaplain_5 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				unity_factor = 0.05
+			}
+		}
+	}
+}

@@ -1,0 +1,661 @@
+﻿###########################
+# CK2 Mod Events
+# LOVE 
+# &
+# DEPRESSION
+###########################
+
+#Copyright Dick Bong, Ace of Aces 2017
+
+add_namespace = council
+
+###########################
+# CK2 Mod Events - Lovers <3
+###########################
+
+#Hire Chancellor
+country_event = {
+	id = council.1
+	title = council.1.t
+	desc = council.1.d
+	is_triggered_only = yes
+
+	option = {
+		name = council.1.a
+		if = {
+			limit = {
+				NOT = {
+					has_idea = chancellor_5
+					has_idea = chancellor_4
+					has_idea = chancellor_3
+					has_idea = chancellor_2
+					has_idea = chancellor_1
+				}
+			}
+			random_list = { 
+				5 = { add_ideas = chancellor_5 }
+				10 = { add_ideas = chancellor_4 }
+				20 = { add_ideas = chancellor_3 }
+				30 = { add_ideas = chancellor_2 }
+				35 = { add_ideas = chancellor_1 }
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					has_idea = chancellor_5
+				}
+				NOT = {
+					has_idea = chancellor_4
+					has_idea = chancellor_3
+					has_idea = chancellor_2
+					has_idea = chancellor_1
+				}
+			}
+			random_list = { 
+				5 = { swap_ideas = { remove_idea = chancellor_5 add_idea = chancellor_5 } }
+				10 = { swap_ideas = { remove_idea = chancellor_5 add_idea = chancellor_4 } }
+				20 = { swap_ideas = { remove_idea = chancellor_5 add_idea = chancellor_3 } }
+				30 = { swap_ideas = { remove_idea = chancellor_5 add_idea = chancellor_2 } }
+				35 = { swap_ideas = { remove_idea = chancellor_5 add_idea = chancellor_1 } }
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					has_idea = chancellor_4
+				}
+				NOT = {
+					has_idea = chancellor_5
+					has_idea = chancellor_3
+					has_idea = chancellor_2
+					has_idea = chancellor_1
+				}
+			}
+			random_list = { 
+				5 = { swap_ideas = { remove_idea = chancellor_4 add_idea = chancellor_5 } }
+				10 = { swap_ideas = { remove_idea = chancellor_4 add_idea = chancellor_4 } }
+				20 = { swap_ideas = { remove_idea = chancellor_4 add_idea = chancellor_3 } }
+				30 = { swap_ideas = { remove_idea = chancellor_4 add_idea = chancellor_2 } }
+				35 = { swap_ideas = { remove_idea = chancellor_4 add_idea = chancellor_1 } }
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					has_idea = chancellor_3
+				}
+				NOT = {
+					has_idea = chancellor_4
+					has_idea = chancellor_5
+					has_idea = chancellor_2
+					has_idea = chancellor_1
+				}
+			}
+			random_list = { 
+				5 = { swap_ideas = { remove_idea = chancellor_3 add_idea = chancellor_5 } }
+				10 = { swap_ideas = { remove_idea = chancellor_3 add_idea = chancellor_4 } }
+				20 = { swap_ideas = { remove_idea = chancellor_3 add_idea = chancellor_3 } }
+				30 = { swap_ideas = { remove_idea = chancellor_3 add_idea = chancellor_2 } }
+				35 = { swap_ideas = { remove_idea = chancellor_3 add_idea = chancellor_1 } }
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					has_idea = chancellor_2
+				}
+				NOT = {
+					has_idea = chancellor_4
+					has_idea = chancellor_3
+					has_idea = chancellor_5
+					has_idea = chancellor_1
+				}
+			}
+			random_list = { 
+				5 = { swap_ideas = { remove_idea = chancellor_2 add_idea = chancellor_5 } }
+				10 = { swap_ideas = { remove_idea = chancellor_2 add_idea = chancellor_4 } }
+				20 = { swap_ideas = { remove_idea = chancellor_2 add_idea = chancellor_3 } }
+				30 = { swap_ideas = { remove_idea = chancellor_2 add_idea = chancellor_2 } }
+				35 = { swap_ideas = { remove_idea = chancellor_2 add_idea = chancellor_1 } }
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					has_idea = chancellor_1
+				}
+				NOT = {
+					has_idea = chancellor_4
+					has_idea = chancellor_3
+					has_idea = chancellor_2
+					has_idea = chancellor_5
+				}
+			}
+			random_list = { 
+				5 = { swap_ideas = { remove_idea = chancellor_1 add_idea = chancellor_5 } }
+				10 = { swap_ideas = { remove_idea = chancellor_1 add_idea = chancellor_4 } }
+				20 = { swap_ideas = { remove_idea = chancellor_1 add_idea = chancellor_3 } }
+				30 = { swap_ideas = { remove_idea = chancellor_1 add_idea = chancellor_2 } }
+				35 = { swap_ideas = { remove_idea = chancellor_1 add_idea = chancellor_1 } }
+			}
+		}
+	}
+}
+
+#Hire marshall
+country_event = {
+	id = council.2
+	title = council.2.t
+	desc = council.2.d
+	is_triggered_only = yes
+
+	option = {
+		name = council.2.a
+		if = {
+			limit = {
+				NOT = {
+					has_idea = marshall_5
+					has_idea = marshall_4
+					has_idea = marshall_3
+					has_idea = marshall_2
+					has_idea = marshall_1
+				}
+			}
+			random_list = { 
+				5 = { add_ideas = marshall_5 }
+				10 = { add_ideas = marshall_4 }
+				20 = { add_ideas = marshall_3 }
+				30 = { add_ideas = marshall_2 }
+				35 = { add_ideas = marshall_1 }
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					has_idea = marshall_5
+				}
+				NOT = {
+					has_idea = marshall_4
+					has_idea = marshall_3
+					has_idea = marshall_2
+					has_idea = marshall_1
+				}
+			}
+			random_list = { 
+				5 = { swap_ideas = { remove_idea = marshall_5 add_idea = marshall_5 } }
+				10 = { swap_ideas = { remove_idea = marshall_5 add_idea = marshall_4 } }
+				20 = { swap_ideas = { remove_idea = marshall_5 add_idea = marshall_3 } }
+				30 = { swap_ideas = { remove_idea = marshall_5 add_idea = marshall_2 } }
+				35 = { swap_ideas = { remove_idea = marshall_5 add_idea = marshall_1 } }
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					has_idea = marshall_4
+				}
+				NOT = {
+					has_idea = marshall_5
+					has_idea = marshall_3
+					has_idea = marshall_2
+					has_idea = marshall_1
+				}
+			}
+			random_list = { 
+				5 = { swap_ideas = { remove_idea = marshall_4 add_idea = marshall_5 } }
+				10 = { swap_ideas = { remove_idea = marshall_4 add_idea = marshall_4 } }
+				20 = { swap_ideas = { remove_idea = marshall_4 add_idea = marshall_3 } }
+				30 = { swap_ideas = { remove_idea = marshall_4 add_idea = marshall_2 } }
+				35 = { swap_ideas = { remove_idea = marshall_4 add_idea = marshall_1 } }
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					has_idea = marshall_3
+				}
+				NOT = {
+					has_idea = marshall_4
+					has_idea = marshall_5
+					has_idea = marshall_2
+					has_idea = marshall_1
+				}
+			}
+			random_list = { 
+				5 = { swap_ideas = { remove_idea = marshall_3 add_idea = marshall_5 } }
+				10 = { swap_ideas = { remove_idea = marshall_3 add_idea = marshall_4 } }
+				20 = { swap_ideas = { remove_idea = marshall_3 add_idea = marshall_3 } }
+				30 = { swap_ideas = { remove_idea = marshall_3 add_idea = marshall_2 } }
+				35 = { swap_ideas = { remove_idea = marshall_3 add_idea = marshall_1 } }
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					has_idea = marshall_2
+				}
+				NOT = {
+					has_idea = marshall_4
+					has_idea = marshall_3
+					has_idea = marshall_5
+					has_idea = marshall_1
+				}
+			}
+			random_list = { 
+				5 = { swap_ideas = { remove_idea = marshall_2 add_idea = marshall_5 } }
+				10 = { swap_ideas = { remove_idea = marshall_2 add_idea = marshall_4 } }
+				20 = { swap_ideas = { remove_idea = marshall_2 add_idea = marshall_3 } }
+				30 = { swap_ideas = { remove_idea = marshall_2 add_idea = marshall_2 } }
+				35 = { swap_ideas = { remove_idea = marshall_2 add_idea = marshall_1 } }
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					has_idea = marshall_1
+				}
+				NOT = {
+					has_idea = marshall_4
+					has_idea = marshall_3
+					has_idea = marshall_2
+					has_idea = marshall_5
+				}
+			}
+			random_list = { 
+				5 = { swap_ideas = { remove_idea = marshall_1 add_idea = marshall_5 } }
+				10 = { swap_ideas = { remove_idea = marshall_1 add_idea = marshall_4 } }
+				20 = { swap_ideas = { remove_idea = marshall_1 add_idea = marshall_3 } }
+				30 = { swap_ideas = { remove_idea = marshall_1 add_idea = marshall_2 } }
+				35 = { swap_ideas = { remove_idea = marshall_1 add_idea = marshall_1 } }
+			}
+		}
+	}
+}
+#Hire steward
+country_event = {
+	id = council.3
+	title = council.3.t
+	desc = council.3.d
+	is_triggered_only = yes
+
+	option = {
+		name = council.3.a
+		if = {
+			limit = {
+				NOT = {
+					has_idea = steward_5
+					has_idea = steward_4
+					has_idea = steward_3
+					has_idea = steward_2
+					has_idea = steward_1
+				}
+			}
+			random_list = { 
+				5 = { add_ideas = steward_5 }
+				10 = { add_ideas = steward_4 }
+				20 = { add_ideas = steward_3 }
+				30 = { add_ideas = steward_2 }
+				35 = { add_ideas = steward_1 }
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					has_idea = steward_5
+				}
+				NOT = {
+					has_idea = steward_4
+					has_idea = steward_3
+					has_idea = steward_2
+					has_idea = steward_1
+				}
+			}
+			random_list = { 
+				5 = { swap_ideas = { remove_idea = steward_5 add_idea = steward_5 } }
+				10 = { swap_ideas = { remove_idea = steward_5 add_idea = steward_4 } }
+				20 = { swap_ideas = { remove_idea = steward_5 add_idea = steward_3 } }
+				30 = { swap_ideas = { remove_idea = steward_5 add_idea = steward_2 } }
+				35 = { swap_ideas = { remove_idea = steward_5 add_idea = steward_1 } }
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					has_idea = steward_4
+				}
+				NOT = {
+					has_idea = steward_5
+					has_idea = steward_3
+					has_idea = steward_2
+					has_idea = steward_1
+				}
+			}
+			random_list = { 
+				5 = { swap_ideas = { remove_idea = steward_4 add_idea = steward_5 } }
+				10 = { swap_ideas = { remove_idea = steward_4 add_idea = steward_4 } }
+				20 = { swap_ideas = { remove_idea = steward_4 add_idea = steward_3 } }
+				30 = { swap_ideas = { remove_idea = steward_4 add_idea = steward_2 } }
+				35 = { swap_ideas = { remove_idea = steward_4 add_idea = steward_1 } }
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					has_idea = steward_3
+				}
+				NOT = {
+					has_idea = steward_4
+					has_idea = steward_5
+					has_idea = steward_2
+					has_idea = steward_1
+				}
+			}
+			random_list = { 
+				5 = { swap_ideas = { remove_idea = steward_3 add_idea = steward_5 } }
+				10 = { swap_ideas = { remove_idea = steward_3 add_idea = steward_4 } }
+				20 = { swap_ideas = { remove_idea = steward_3 add_idea = steward_3 } }
+				30 = { swap_ideas = { remove_idea = steward_3 add_idea = steward_2 } }
+				35 = { swap_ideas = { remove_idea = steward_3 add_idea = steward_1 } }
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					has_idea = steward_2
+				}
+				NOT = {
+					has_idea = steward_4
+					has_idea = steward_3
+					has_idea = steward_5
+					has_idea = steward_1
+				}
+			}
+			random_list = { 
+				5 = { swap_ideas = { remove_idea = steward_2 add_idea = steward_5 } }
+				10 = { swap_ideas = { remove_idea = steward_2 add_idea = steward_4 } }
+				20 = { swap_ideas = { remove_idea = steward_2 add_idea = steward_3 } }
+				30 = { swap_ideas = { remove_idea = steward_2 add_idea = steward_2 } }
+				35 = { swap_ideas = { remove_idea = steward_2 add_idea = steward_1 } }
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					has_idea = steward_1
+				}
+				NOT = {
+					has_idea = steward_4
+					has_idea = steward_3
+					has_idea = steward_2
+					has_idea = steward_5
+				}
+			}
+			random_list = { 
+				5 = { swap_ideas = { remove_idea = steward_1 add_idea = steward_5 } }
+				10 = { swap_ideas = { remove_idea = steward_1 add_idea = steward_4 } }
+				20 = { swap_ideas = { remove_idea = steward_1 add_idea = steward_3 } }
+				30 = { swap_ideas = { remove_idea = steward_1 add_idea = steward_2 } }
+				35 = { swap_ideas = { remove_idea = steward_1 add_idea = steward_1 } }
+			}
+		}
+	}
+}
+#Hire spymaster
+country_event = {
+	id = council.4
+	title = council.4.t
+	desc = council.4.d
+	is_triggered_only = yes
+
+	option = {
+		name = council.4.a
+		if = {
+			limit = {
+				NOT = {
+					has_idea = spymaster_5
+					has_idea = spymaster_4
+					has_idea = spymaster_3
+					has_idea = spymaster_2
+					has_idea = spymaster_1
+				}
+			}
+			random_list = { 
+				5 = { add_ideas = spymaster_5 }
+				10 = { add_ideas = spymaster_4 }
+				20 = { add_ideas = spymaster_3 }
+				30 = { add_ideas = spymaster_2 }
+				35 = { add_ideas = spymaster_1 }
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					has_idea = spymaster_5
+				}
+				NOT = {
+					has_idea = spymaster_4
+					has_idea = spymaster_3
+					has_idea = spymaster_2
+					has_idea = spymaster_1
+				}
+			}
+			random_list = { 
+				5 = { swap_ideas = { remove_idea = spymaster_5 add_idea = spymaster_5 } }
+				10 = { swap_ideas = { remove_idea = spymaster_5 add_idea = spymaster_4 } }
+				20 = { swap_ideas = { remove_idea = spymaster_5 add_idea = spymaster_3 } }
+				30 = { swap_ideas = { remove_idea = spymaster_5 add_idea = spymaster_2 } }
+				35 = { swap_ideas = { remove_idea = spymaster_5 add_idea = spymaster_1 } }
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					has_idea = spymaster_4
+				}
+				NOT = {
+					has_idea = spymaster_5
+					has_idea = spymaster_3
+					has_idea = spymaster_2
+					has_idea = spymaster_1
+				}
+			}
+			random_list = { 
+				5 = { swap_ideas = { remove_idea = spymaster_4 add_idea = spymaster_5 } }
+				10 = { swap_ideas = { remove_idea = spymaster_4 add_idea = spymaster_4 } }
+				20 = { swap_ideas = { remove_idea = spymaster_4 add_idea = spymaster_3 } }
+				30 = { swap_ideas = { remove_idea = spymaster_4 add_idea = spymaster_2 } }
+				35 = { swap_ideas = { remove_idea = spymaster_4 add_idea = spymaster_1 } }
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					has_idea = spymaster_3
+				}
+				NOT = {
+					has_idea = spymaster_4
+					has_idea = spymaster_5
+					has_idea = spymaster_2
+					has_idea = spymaster_1
+				}
+			}
+			random_list = { 
+				5 = { swap_ideas = { remove_idea = spymaster_3 add_idea = spymaster_5 } }
+				10 = { swap_ideas = { remove_idea = spymaster_3 add_idea = spymaster_4 } }
+				20 = { swap_ideas = { remove_idea = spymaster_3 add_idea = spymaster_3 } }
+				30 = { swap_ideas = { remove_idea = spymaster_3 add_idea = spymaster_2 } }
+				35 = { swap_ideas = { remove_idea = spymaster_3 add_idea = spymaster_1 } }
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					has_idea = spymaster_2
+				}
+				NOT = {
+					has_idea = spymaster_4
+					has_idea = spymaster_3
+					has_idea = spymaster_5
+					has_idea = spymaster_1
+				}
+			}
+			random_list = { 
+				5 = { swap_ideas = { remove_idea = spymaster_2 add_idea = spymaster_5 } }
+				10 = { swap_ideas = { remove_idea = spymaster_2 add_idea = spymaster_4 } }
+				20 = { swap_ideas = { remove_idea = spymaster_2 add_idea = spymaster_3 } }
+				30 = { swap_ideas = { remove_idea = spymaster_2 add_idea = spymaster_2 } }
+				35 = { swap_ideas = { remove_idea = spymaster_2 add_idea = spymaster_1 } }
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					has_idea = spymaster_1
+				}
+				NOT = {
+					has_idea = spymaster_4
+					has_idea = spymaster_3
+					has_idea = spymaster_2
+					has_idea = spymaster_5
+				}
+			}
+			random_list = { 
+				5 = { swap_ideas = { remove_idea = spymaster_1 add_idea = spymaster_5 } }
+				10 = { swap_ideas = { remove_idea = spymaster_1 add_idea = spymaster_4 } }
+				20 = { swap_ideas = { remove_idea = spymaster_1 add_idea = spymaster_3 } }
+				30 = { swap_ideas = { remove_idea = spymaster_1 add_idea = spymaster_2 } }
+				35 = { swap_ideas = { remove_idea = spymaster_1 add_idea = spymaster_1 } }
+			}
+		}
+	}
+}
+#Hire court_chaplain
+country_event = {
+	id = council.5
+	title = council.5.t
+	desc = council.5.d
+	is_triggered_only = yes
+
+	option = {
+		name = council.5.a
+		if = {
+			limit = {
+				NOT = {
+					has_idea = court_chaplain_5
+					has_idea = court_chaplain_4
+					has_idea = court_chaplain_3
+					has_idea = court_chaplain_2
+					has_idea = court_chaplain_1
+				}
+			}
+			random_list = { 
+				5 = { add_ideas = court_chaplain_5 }
+				10 = { add_ideas = court_chaplain_4 }
+				20 = { add_ideas = court_chaplain_3 }
+				30 = { add_ideas = court_chaplain_2 }
+				35 = { add_ideas = court_chaplain_1 }
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					has_idea = court_chaplain_5
+				}
+				NOT = {
+					has_idea = court_chaplain_4
+					has_idea = court_chaplain_3
+					has_idea = court_chaplain_2
+					has_idea = court_chaplain_1
+				}
+			}
+			random_list = { 
+				5 = { swap_ideas = { remove_idea = court_chaplain_5 add_idea = court_chaplain_5 } }
+				10 = { swap_ideas = { remove_idea = court_chaplain_5 add_idea = court_chaplain_4 } }
+				20 = { swap_ideas = { remove_idea = court_chaplain_5 add_idea = court_chaplain_3 } }
+				30 = { swap_ideas = { remove_idea = court_chaplain_5 add_idea = court_chaplain_2 } }
+				35 = { swap_ideas = { remove_idea = court_chaplain_5 add_idea = court_chaplain_1 } }
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					has_idea = court_chaplain_4
+				}
+				NOT = {
+					has_idea = court_chaplain_5
+					has_idea = court_chaplain_3
+					has_idea = court_chaplain_2
+					has_idea = court_chaplain_1
+				}
+			}
+			random_list = { 
+				5 = { swap_ideas = { remove_idea = court_chaplain_4 add_idea = court_chaplain_5 } }
+				10 = { swap_ideas = { remove_idea = court_chaplain_4 add_idea = court_chaplain_4 } }
+				20 = { swap_ideas = { remove_idea = court_chaplain_4 add_idea = court_chaplain_3 } }
+				30 = { swap_ideas = { remove_idea = court_chaplain_4 add_idea = court_chaplain_2 } }
+				35 = { swap_ideas = { remove_idea = court_chaplain_4 add_idea = court_chaplain_1 } }
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					has_idea = court_chaplain_3
+				}
+				NOT = {
+					has_idea = court_chaplain_4
+					has_idea = court_chaplain_5
+					has_idea = court_chaplain_2
+					has_idea = court_chaplain_1
+				}
+			}
+			random_list = { 
+				5 = { swap_ideas = { remove_idea = court_chaplain_3 add_idea = court_chaplain_5 } }
+				10 = { swap_ideas = { remove_idea = court_chaplain_3 add_idea = court_chaplain_4 } }
+				20 = { swap_ideas = { remove_idea = court_chaplain_3 add_idea = court_chaplain_3 } }
+				30 = { swap_ideas = { remove_idea = court_chaplain_3 add_idea = court_chaplain_2 } }
+				35 = { swap_ideas = { remove_idea = court_chaplain_3 add_idea = court_chaplain_1 } }
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					has_idea = court_chaplain_2
+				}
+				NOT = {
+					has_idea = court_chaplain_4
+					has_idea = court_chaplain_3
+					has_idea = court_chaplain_5
+					has_idea = court_chaplain_1
+				}
+			}
+			random_list = { 
+				5 = { swap_ideas = { remove_idea = court_chaplain_2 add_idea = court_chaplain_5 } }
+				10 = { swap_ideas = { remove_idea = court_chaplain_2 add_idea = court_chaplain_4 } }
+				20 = { swap_ideas = { remove_idea = court_chaplain_2 add_idea = court_chaplain_3 } }
+				30 = { swap_ideas = { remove_idea = court_chaplain_2 add_idea = court_chaplain_2 } }
+				35 = { swap_ideas = { remove_idea = court_chaplain_2 add_idea = court_chaplain_1 } }
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					has_idea = court_chaplain_1
+				}
+				NOT = {
+					has_idea = court_chaplain_4
+					has_idea = court_chaplain_3
+					has_idea = court_chaplain_2
+					has_idea = court_chaplain_5
+				}
+			}
+			random_list = { 
+				5 = { swap_ideas = { remove_idea = court_chaplain_1 add_idea = court_chaplain_5 } }
+				10 = { swap_ideas = { remove_idea = court_chaplain_1 add_idea = court_chaplain_4 } }
+				20 = { swap_ideas = { remove_idea = court_chaplain_1 add_idea = court_chaplain_3 } }
+				30 = { swap_ideas = { remove_idea = court_chaplain_1 add_idea = court_chaplain_2 } }
+				35 = { swap_ideas = { remove_idea = court_chaplain_1 add_idea = court_chaplain_1 } }
+			}
+		}
+	}
+}
