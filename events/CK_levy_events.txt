@@ -1,0 +1,107 @@
+﻿###########################
+# CK2 Mod Events
+# LEVIES
+###########################
+
+#Copyright Dick Bong, Ace of Aces 2017
+
+add_namespace = levy
+
+###########################
+# CK2 Mod Events - Lovers <3
+###########################
+
+country_event = {
+	id = levy.1
+	title = levy.1.t
+	desc = levy.1.d
+	is_triggered_only = yes
+
+	option ={
+		name = levy.1.a
+		if = {
+			limit = {
+				ROOT = { controls_state = 1 }
+			}
+			load_oob = LEVY_1
+		}
+		if = {
+			limit = {
+				ROOT = { controls_state = 2 }
+			}
+			load_oob = LEVY_2
+		}
+		if = {
+			limit = {
+				ROOT = { controls_state = 3 }
+			}
+			load_oob = LEVY_3
+		}
+		if = {
+			limit = {
+				ROOT = { controls_state = 4 }
+			}
+			load_oob = LEVY_4
+		}
+		if = {
+			limit = {
+				ROOT = { controls_state = 5 }
+			}
+			load_oob = LEVY_5
+		}
+		if = {
+			limit = {
+				ROOT = { controls_state = 5 }
+			}
+			load_oob = LEVY_5
+		}
+		if = {
+			limit = {
+				ROOT = { controls_state = 6 }
+			}
+			load_oob = LEVY_6
+		}
+		if = {
+			limit = {
+				ROOT = { controls_state = 7 }
+			}
+			load_oob = LEVY_7
+		}
+		if = {
+			limit = {
+				ROOT = { controls_state = 8 }
+			}
+			load_oob = LEVY_8
+		}
+		if = {
+			limit = {
+				ROOT = { controls_state = 9 }
+			}
+			load_oob = LEVY_9
+		}
+		if = {
+			limit = {
+				ROOT = { controls_state = 10 }
+			}
+			load_oob = LEVY_10
+		}
+		if = {
+			limit = {
+				ROOT = { controls_state = 11 }
+			}
+			load_oob = LEVY_11
+		}
+		if = {
+			limit = {
+				ROOT = { controls_state = 12 }
+			}
+			load_oob = LEVY_12
+		}
+		if = {
+			limit = {
+				ROOT = { controls_state = 12 }
+			}
+			load_oob = LEVY_13
+		}
+	}
+}

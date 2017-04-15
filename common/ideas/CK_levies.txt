@@ -40,22 +40,22 @@ ideas = {
 			}
 		}
 	}
-	country = {
-		idea_raised_levies = {
-			
-			allowed = {
-				always = yes
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				
-			}
-		}
-	}
+	#country = {
+	#	idea_raised_levies = {
+	#		
+	#		allowed = {
+	#			always = yes
+	#		}
+	#
+	#		allowed_civil_war = {
+	#			always = yes
+	#		}
+	#		
+	#		removal_cost = -1
+	#		
+	#		modifier = {
+	#			
+	#		}
+	#	}
+	#}
 }

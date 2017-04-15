@@ -1,8 +1,6 @@
 ﻿###########################
 # CK2 Mod Events
-# LOVE 
-# &
-# DEPRESSION
+# LEVIES
 ###########################
 
 #Copyright Dick Bong, Ace of Aces 2017
